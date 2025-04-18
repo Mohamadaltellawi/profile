@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamad@console</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a1c1d;
+      font-family: 'Courier New', Courier, monospace;
+      color: #00ffe0;
+    }
+    .terminal {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 2px solid #00ffe0;
+      box-shadow: 0 0 20px #00ffe0;
+      background-color: #1a1c1d;
+    }
+    .header {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background-color: #00ffe0;
+      margin-left: 5px;
+      animation: blink 1s steps(2, start) infinite;
+    }
+    @keyframes blink {
+      to { visibility: hidden; }
+    }
+    .nav-item {
+      margin: 10px 0;
+      cursor: pointer;
+      text-decoration: underline;
+      display: block;
+      color: #00ccff;
+    }
+    .nav-item:hover {
+      color: #66ffff;
+    }
+    .section {
+      display: none;
+      margin-top: 20px;
+    }
+    .active {
+      display: block;
+    }
+    a {
+      color: #66ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="header">Mohamad@console:~$<div class="cursor"></div></div>
+    <div class="nav">
+      <span class="nav-item" onclick="showSection('about')">about me</span>
+      <span class="nav-item" onclick="showSection('projects')">projects</span>
+      <span class="nav-item" onclick="showSection('blogs')">latest posts</span>
+      <span class="nav-item" onclick="showSection('contact')">contact</span>
+    </div>
+
+    <div id="about" class="section">
+      <p>I am Mohamad, a developer who enjoys building slick interfaces, solving real-world problems, and hacking on side projects that sometimes work. Welcome to my digital terminal.</p>
+    </div>
+
+    <div id="projects" class="section">
+      <ul>
+        <li>🔧 Portfolio Terminal Interface</li>
+        <li>🧠 AI Learning Assistant</li>
+        <li>📱 Mobile Budgeting App</li>
+        <li>🔒 Secure File Sharing Tool</li>
+      </ul>
+    </div>
+
+    <div id="blogs" class="section">
+      <ul>
+        <li>📝 How I Built This Terminal UI</li>
+        <li>🚀 My Favorite Dev Tools of the Year</li>
+        <li>🔐 Cybersecurity for Creators</li>
+        <li>🌐 Hosting Personal Projects on the Cheap</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="section">
+      <p>Email: mohamad@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/mohamad" target="_blank">linkedin.com/in/mohamad</a></p>
+      <p>GitHub: <a href="https://github.com/mohamad" target="_blank">github.com/mohamad</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
