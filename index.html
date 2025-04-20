@@ -46,9 +46,12 @@
     .nav-item:hover {
       color: #66ffff;
     }
+    .submenu {
+      margin-left: 20px;
+    }
     .section {
       display: none;
-      margin-top: 20px;
+      margin-top: 10px;
     }
     .active {
       display: block;
@@ -67,37 +70,82 @@
     <div class="header">Mohamad@console:~$<div class="cursor"></div></div>
     <div class="nav">
       <span class="nav-item" onclick="showSection('about')">about me</span>
+      <div id="about" class="section">
+        <p>I am Mohamad, a developer who enjoys building slick interfaces, solving real-world problems, and hacking on side projects that sometimes work. Welcome to my digital terminal.</p>
+      </div>
+
       <span class="nav-item" onclick="showSection('projects')">projects</span>
+      <div id="projects" class="section">
+        <ul>
+          <li>🔧 Portfolio Terminal Interface</li>
+          <li>🧠 AI Learning Assistant</li>
+          <li>📱 Mobile Budgeting App</li>
+          <li>🔒 Secure File Sharing Tool</li>
+        </ul>
+      </div>
+
       <span class="nav-item" onclick="showSection('blogs')">latest posts</span>
+      <div id="blogs" class="section">
+        <span class="nav-item" onclick="showSection('blogpost1')">↳ Rethinking Risk Registers in the Age of AI</span>
+        <div style="font-size: 0.8em; color: #7fdde0; margin-left: 10px;">📅 December 5th, 2023</div>
+      </div>
+
       <span class="nav-item" onclick="showSection('contact')">contact</span>
+      <div id="contact" class="section">
+        <p>You can reach out to me directly through my network or professional channels.</p>
+      </div>
     </div>
 
-    <div id="about" class="section">
-      <p>I am Mohamad, a developer who enjoys building slick interfaces, solving real-world problems, and hacking on side projects that sometimes work. Welcome to my digital terminal.</p>
-    </div>
+    <!-- Blog Post Section -->
+    <div id="blogpost1" class="section">
+      <h3>Rethinking Risk Registers in the Age of AI</h3>
+      <p><strong>Date:</strong> December 5th, 2023</p>
+      <p><strong>Executive Summary:</strong><br>
+      While most enterprise risk programs invest in tooling to improve the visibility and accountability of IT risks, the foundational structure of many risk registers remains surprisingly manual, static, and reactive. As organizations face increased scrutiny from regulators, customers, and boards, there is a growing case for reimagining how risks are identified, tracked, and acted upon — and how <strong>large language models (LLMs)</strong> can modernize this function.</p>
 
-    <div id="projects" class="section">
-      <ul>
-        <li>🔧 Portfolio Terminal Interface</li>
-        <li>🧠 AI Learning Assistant</li>
-        <li>📱 Mobile Budgeting App</li>
-        <li>🔒 Secure File Sharing Tool</li>
-      </ul>
-    </div>
+      <p>In this article, we explore how generative AI can support better risk governance, and why overreliance on legacy risk platforms may in fact hinder organizational agility and strategic clarity.</p>
 
-    <div id="blogs" class="section">
-      <ul>
-        <li>📝 How I Built This Terminal UI</li>
-        <li>🚀 My Favorite Dev Tools of the Year</li>
-        <li>🔐 Cybersecurity for Creators</li>
-        <li>🌐 Hosting Personal Projects on the Cheap</li>
-      </ul>
-    </div>
+      <p><strong>The Problem: Tools That Create More Friction Than Value</strong><br>
+      Most governance, risk, and compliance (GRC) platforms promise centralization and traceability. Yet, in practice, they often:
+        <ul>
+          <li>Require heavy manual input from risk analysts</li>
+          <li>Enforce rigid taxonomies that struggle to accommodate emergent risks</li>
+          <li>Provide limited analytical insight beyond basic dashboards</li>
+          <li>Silo action plans and risk owner accountability within project-level workflows</li>
+        </ul>
+      This operational overhead turns what should be a strategic enabler into a reporting bottleneck. Risk registers become checklists rather than living sources of insight.</p>
 
-    <div id="contact" class="section">
-      <p>Email: mohamad@example.com</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/mohamad" target="_blank">linkedin.com/in/mohamad</a></p>
-      <p>GitHub: <a href="https://github.com/mohamad" target="_blank">github.com/mohamad</a></p>
+      <p><strong>The Opportunity: LLMs as Strategic Risk Partners</strong><br>
+      Emerging use cases for LLMs in risk management signal a paradigm shift. Rather than simply accelerating documentation tasks, these models offer three transformational benefits:
+        <ul>
+          <li><strong>Contextual Risk Extraction</strong> – LLMs can scan meeting minutes, audit reports, project updates, and technical documents to extract latent risks, misalignments, or control gaps that may not be explicitly reported.</li>
+          <li><strong>Action Plan Generation & Triage</strong> – Rather than relying on template mitigation measures, LLMs can suggest relevant action plans based on historical controls, regulatory expectations, and contextual business constraints.</li>
+          <li><strong>Dynamic Risk Prioritization</strong> – By ingesting signals across internal systems, LLMs can assist in dynamically recalibrating risk scores and drawing management attention to key exposures.</li>
+        </ul>
+      </p>
+
+      <p><strong>Strategic Risks of Poor Tooling</strong><br>
+      Investing in the wrong tooling — or failing to evolve it — carries long-term business risks:
+        <ul>
+          <li><strong>False Confidence</strong>: Risk registers filled for compliance, not insight, create a false sense of control.</li>
+          <li><strong>Audit Fatigue</strong>: Repetitive data entry without synthesis frustrates contributors and weakens accountability.</li>
+          <li><strong>Decision Paralysis</strong>: When risk signals are buried in bureaucratic tooling, leadership may miss early indicators of systemic issues.</li>
+        </ul>
+      </p>
+
+      <p>Organizations that fail to modernize their GRC approach will increasingly find themselves outpaced by those that treat risk as a living discipline, not a quarterly exercise.</p>
+
+      <p><strong>Implementing LLMs Thoughtfully</strong><br>
+      While promising, LLM adoption must be approached with care:
+        <ul>
+          <li><strong>Data Sensitivity</strong>: Models should be deployed with clear boundaries on access to sensitive data.</li>
+          <li><strong>Human Oversight</strong>: Risk judgment cannot be outsourced to machines — outputs must be reviewed, contextualized, and challenged.</li>
+          <li><strong>Explainability</strong>: LLMs used in risk registers should offer traceable rationales for their outputs, to support auditability and defensibility.</li>
+        </ul>
+      </p>
+
+      <p><strong>Final Thought: Risk Governance at the Speed of Relevance</strong><br>
+      Risk professionals are no longer just advisors — they are stewards of enterprise trust. As digital systems accelerate, boards and executive committees need not just dashboards, but foresight. LLMs, when thoughtfully deployed, can elevate the role of risk registers from administrative repositories to strategic control towers.</p>
     </div>
   </div>
 
@@ -105,7 +153,8 @@
     function showSection(id) {
       const sections = document.querySelectorAll('.section');
       sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
     }
   </script>
 </body>
